@@ -17,7 +17,7 @@ namespace Linq
                 new Student() { StudentID = 4, StudentName = "Ram" } ,
                 new Student() { StudentID = 5, StudentName = "Ron"  }
             };
-            var method = studentList.Where(s => s.StudentName.StartsWith("R"));
+            var method = studentList.Where(s => s.StudentName.StartsWith("o"));
             foreach (var student in method)
             {
                 Console.WriteLine(student.StudentName);
