@@ -17,26 +17,24 @@ namespace Linq
                 new Student() { StudentID = 4, StudentName = "Ram" } ,
                 new Student() { StudentID = 5, StudentName = "Ron"  }
             };
-           
+            var method = studentList.Where(s => s.StudentName.StartsWith("R"));
+            foreach (var student in method)
+            {
+                Console.WriteLine(student.StudentName);
+            }
         }
-        var resulta = from student in studentList
-                          where student.StudentName.Contains("o")
-                          select student;
 
-        foreach (var student in resulta)
-        
-            Console.WriteLine(student.ToString());
-        Console.ReadKey();
-}
+    }
     public class Student
     {
 
         public int StudentID { get; set; }
         public string StudentName { get; set; }
-    public override string ToString()
-    {
-        string ispis="Redni broj:"+this.StudentID+"Ime:"+this.StudentName;
-        return ispis
-    }
+        public override string ToString()
+        {
+            string ispis = "Redni broj:" + this.StudentID + "Ime:" + this.StudentName;
+            return ispis;
+        }
+    } 
 }
 
